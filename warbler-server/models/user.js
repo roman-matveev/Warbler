@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
     username       : {type: String, required: true, unique: true},
     password       : {type: String, required: true},
     profileImageUrl: {type: String},
+    messages       : [{type: mongoose.Schema.Types.ObjectId, ref: 'Message'}],
 });
 
 userSchema.pre('save', async function(next) {
@@ -27,7 +28,7 @@ userSchema.methods.comparePassword = async function(candidatePassword, next) {
     try {
         let isMatch = await bcryptjs.compare(candidatePassword, this.password);
         return isMatch;
-        
+
     } catch (err) {
         return next(err);
     }

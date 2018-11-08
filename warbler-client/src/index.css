@@ -2,6 +2,10 @@ body {
     background-color: #E6E6E6;
 }
 
+h4 {
+    padding-bottom: 10px;
+}
+
 .navbar {
     margin-bottom : 1rem;
 }
@@ -20,8 +24,10 @@ body {
 .navbar-brand > img {
     display: inline-block;
     width: 20px;
-    margin: 0 5px 2px 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
     border-radius: 2px;
+    transform: scale(1.5);
 }
 
 ul.nav.navbar-nav li {
@@ -33,6 +39,22 @@ ul.nav.navbar-nav li {
     background-size: 100% 100%;
 }
 
-img {
-    transform: scale(1.5);
+.home-hero {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    background-image: url('./images/signed-out.jpg');
+    text-align: center;
+    padding: 1rem;
+    background-position: center center;
+    background-size: cover;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #6F6F6F;
 }

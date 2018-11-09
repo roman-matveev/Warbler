@@ -8,6 +8,7 @@ h4 {
 
 .navbar {
     margin-bottom : 1rem;
+    box-shadow: 0 1px 6px 0 rgba(48, 47, 47, 0.5);
 }
 
     .navbar a {
@@ -50,7 +51,7 @@ ul.nav.navbar-nav li {
     align-items: center;
     justify-content: center;
     z-index: -1;
-    background-image: url('./images/signed-out.jpg');
+    background-image: url('./images/hero-bg.png');
     text-align: center;
     padding: 1rem;
     background-position: center center;

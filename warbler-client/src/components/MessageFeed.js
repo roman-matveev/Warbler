@@ -4,7 +4,7 @@ import MessageList from '../containers/MessageList';
 const MessageFeed = props => {
     return (
         <div className="row">
-            <MessageFeed />
+            <MessageList />
         </div>
     );
 }

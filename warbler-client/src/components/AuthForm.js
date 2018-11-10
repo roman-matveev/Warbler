@@ -4,17 +4,11 @@ class AuthForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: '',
-            username: '',
-            password: '',
+            email          : '',
+            username       : '',
+            password       : '',
             profileImageUrl: ''
         }
-    }
-
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
     }
 
     handleSubmit = (e) => {
@@ -27,6 +21,12 @@ class AuthForm extends Component {
         })
         .catch(() => {
             return;
+        })
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
         });
     }
 
@@ -40,7 +40,7 @@ class AuthForm extends Component {
 
         return (
             <div>
-                <div className="justify-content-md-center text-center">
+                <div className="row justify-content-md-center text-center">
                     <div className="col-md-6">
                         <form onSubmit={this.handleSubmit}>
                             <h2>{heading}</h2>
@@ -66,6 +66,7 @@ class AuthForm extends Component {
                                 id='password'
                                 name='password'
                                 onChange={this.handleChange}
+                                value={password}
                             />
 
                             {signUp && (

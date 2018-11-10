@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import MessageFeed from './MessageFeed';
 
 const Homepage = ({currentUser}) => {
     if (!currentUser.isAuthenticated) {
@@ -14,7 +15,9 @@ const Homepage = ({currentUser}) => {
 
     return (
         <div>
-            <h1>:)</h1>
+            <MessageFeed profileImageUrl={currentUser.user.profileImageUrl}
+                username={currentUser.user.username}
+            />
         </div>
     );
 }

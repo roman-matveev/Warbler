@@ -19,9 +19,9 @@ class Navbar extends Component {
                     </div>
 
                     {this.props.currentUser.isAuthenticated ? (
-                        <ul className="nav-navbar-nav navbar-right">
+                        <ul className="nav navbar-nav navbar-right">
                             <li><Link to={`/users/${this.props.currentUser.user.id}/messages/new`}>New Message</Link></li>
-                            <li><a onClick={this.signout}>Sign Out</a></li>
+                            <li><a href='/' onClick={this.signout}>Sign Out</a></li>
                         </ul>
                     ) : (
                         <ul className="nav navbar-nav navbar-right">
